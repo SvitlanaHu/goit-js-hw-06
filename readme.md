@@ -72,12 +72,12 @@ HTML містить порожній список ul#ingredients.
 JavaScript містить масив рядків.
 
 const ingredients = [
-  "Potatoes",
-  "Mushrooms",
-  "Garlic",
-  "Tomatos",
-  "Herbs",
-  "Condiments",
+"Potatoes",
+"Mushrooms",
+"Garlic",
+"Tomatos",
+"Herbs",
+"Condiments",
 ];
 
 Напиши скрипт, який для кожного елемента масиву ingredients:
@@ -86,6 +86,7 @@ const ingredients = [
 Додасть назву інгредієнта як його текстовий вміст.
 Додасть елементу клас item.
 Після чого, вставить усі <li> за одну операцію у список ul#ingredients.
+
 Завдання 3
 Напиши скрипт для створення галереї зображень на підставі масиву даних. HTML містить список ul.gallery.
 
@@ -96,20 +97,19 @@ const ingredients = [
 Усі елементи галереї повинні додаватися в DOM за одну операцію додавання.
 Додай мінімальне оформлення галереї флексбоксами або грідами через CSS класи.
 const images = [
-  {
-    url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260",
-    alt: "White and Black Long Fur Cat",
-  },
-  {
-    url: "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?dpr=2&h=750&w=1260",
-    alt: "Orange and White Koi Fish Near Yellow Koi Fish",
-  },
-  {
-    url: "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260",
-    alt: "Group of Horses Running",
-  },
+{
+url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260",
+alt: "White and Black Long Fur Cat",
+},
+{
+url: "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?dpr=2&h=750&w=1260",
+alt: "Orange and White Koi Fish Near Yellow Koi Fish",
+},
+{
+url: "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260",
+alt: "Group of Horses Running",
+},
 ];
-
 
 Завдання 4
 Лічильник складається зі спану і кнопок, які по кліку повинні збільшувати і зменшувати його значення на одиницю.
@@ -144,15 +144,15 @@ const images = [
 Для додавання стилів використовуй CSS-класи valid і invalid, які ми вже додали у вихідні файли завдання.
 
 #validation-input {
-  border: 3px solid #bdbdbd;
+border: 3px solid #bdbdbd;
 }
 
 #validation-input.valid {
-  border-color: #4caf50;
+border-color: #4caf50;
 }
 
 #validation-input.invalid {
-  border-color: #f44336;
+border-color: #f44336;
 }
 
 Завдання 7
@@ -193,7 +193,7 @@ const images = [
 Для генерування випадкового кольору використовуй функцію getRandomHexColor.
 
 function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
+return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
     .padStart(6, 0)}`;
 }
@@ -215,7 +215,7 @@ function getRandomHexColor() {
 Кожен елемент після першого повинен бути ширшим і вищим від попереднього на 10px.
 Всі елементи повинні мати випадковий колір фону у форматі HEX. Використовуй готову функцію getRandomHexColor для отримання кольору.
 function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
+return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
     .padStart(6, 0)}`;
 }
