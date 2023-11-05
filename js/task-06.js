@@ -1,13 +1,14 @@
-const textInput = document.querySelector("#validation-input")
+const textInput = document.querySelector('#validation-input');
 
 textInput.addEventListener("blur", (event) => {
-    textInput.textContent = event.currentTarget.value.trim();
-    const dataLength = textInput.elements;
+    const inputContent = event.target.value.trim();
+    const dataLength = textInput.getAttribute("data-length");
     console.log(dataLength);
-    if (textInput.textContent.length === 6) {
-        textInput.style.borderColor = "green";
+    textInput.classList.remove("valid", "invalid");
+    if (inputContent.length === 6) {
+        textInput.classList.add("valid");
     } else {
-        textInput.style.borderColor = "red";
-
+        textInput.classList.add("invalid");
     }
 });
+
