@@ -5,39 +5,32 @@ const boxesContainer = document.querySelector('#boxes');
 boxesContainer.style.display = "flex";
 boxesContainer.style.flexWrap = "wrap";
 boxesContainer.style.padding = "20px";
-boxesContainer.style.backgroundColor = "gray";
+boxesContainer.style.gap = "10px";
+boxesContainer.style.backgroundColor = "lightgray";
 
-inputNumber.addEventListener('input', handleInput);
 btnCreate.addEventListener('click', createBoxes);
 btnDestroy.addEventListener('click', destroyBoxes);
 
-function handleInput(event) {
-  const amount = event.target.value;
-  console.log(amount);
-  return amount;
-}
-
 function createBoxes() {
-  const amount = handleInput();
-  let widthItem = 30;
-  let heightItem = 30;
-  let boxesMarkup = '';
+  const amount = inputNumber.value;
+  console.log(amount);
+  let boxesMarkup = [];
 
   for (let i = 0; i < amount; i++) {
-    const color = getRandomHexColor();
-    const boxMarkup = `<div style="width:${widthItem}px; height:${heightItem}px; background-color:${color}"></div>`;
-    boxesMarkup += boxMarkup;
-
-    widthItem += 10;
-    heightItem += 10;
+    const box = document.createElement('div');
+    const sizeItem = 30 + i * 10;
+    box.style.width = `${sizeItem}px`;
+    box.style.height = `${sizeItem}px`;
+    box.style.backgroundColor = getRandomHexColor();
+    box.style.border = "2px solid white";
+    boxesMarkup.push(box);
   }
 
-  boxesContainer.innerHTML = boxesMarkup;
+  boxesContainer.append(...boxesMarkup);
 }
 
 function destroyBoxes() {
-  // boxesContainer.innerHTML = '';
-  boxesContainer.length = 0;
+  boxesContainer.innerHTML = '';
 }
 
 function getRandomHexColor() {
