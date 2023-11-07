@@ -9,10 +9,16 @@ const ingredients = [
 
 const listIngredients = document.querySelector("#ingredients");
 
-ingredients.forEach(ingredient => {
-  const listItem = document.createElement("li");
-  listItem.classList = "item"
-  listItem.textContent = ingredient;
+// ingredients.forEach(ingredient => {
+//   const listItem = document.createElement("li");
+//   listItem.classList = "item"
+//   listItem.textContent = ingredient;
 
-  listIngredients.append(listItem)
-});
+//   listIngredients.append(listItem)
+// });
+
+const markup = ingredients
+  .map((ingredient) => `<li class="item">${ingredient}</li>`)
+  .join("");
+
+listIngredients.insertAdjacentHTML("beforeend", markup);
