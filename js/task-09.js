@@ -12,7 +12,7 @@ console.log(spanText);
 bodyBackground.addEventListener("click", handleClick);
 function handleClick() {
   bodyBackground.style.backgroundColor = getRandomHexColor();
-  spanText.textContent = getRandomHexColor().value;
+  spanText.textContent = `${getRandomHexColor()}`;
   console.log("spanText:", spanText);
   console.log("getRandomHexColor", getRandomHexColor().value);
 };
