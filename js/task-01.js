@@ -6,8 +6,8 @@ console.log("Number of categories:", listItem.length);
 //   Category: Animals
 const items = document.querySelectorAll('#categories .item');
 items.forEach((item) => {
-    const itemTitle = item.querySelector("h2").textContent;
-    const numberOfElements = item.querySelectorAll("li").length;
+    const itemTitle = item.firstElementChild.textContent;
+    const numberOfElements = item.lastElementChild.children.length;
 
     console.log(`Categories: ${itemTitle}`);
     console.log(`Elements: ${numberOfElements}`);
