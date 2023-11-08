@@ -16,9 +16,18 @@ const listIngredients = document.querySelector("#ingredients");
 
 //   listIngredients.append(listItem)
 // });
+// ************************************************
+// const markup = ingredients
+//   .map((ingredient) => `<li class="item">${ingredient}</li>`)
+//   .join("");
 
-const markup = ingredients
-  .map((ingredient) => `<li class="item">${ingredient}</li>`)
-  .join("");
+// listIngredients.insertAdjacentHTML("beforeend", markup);
+// ************************************************
 
-listIngredients.insertAdjacentHTML("beforeend", markup);
+const markup = ingredients.map(ingredient => {
+  const listItem = document.createElement("li");
+  listItem.classList = "item"
+  listItem.textContent = ingredient;
+
+  listIngredients.append(listItem)
+});
